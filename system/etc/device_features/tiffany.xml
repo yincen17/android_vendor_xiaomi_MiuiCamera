@@ -190,6 +190,10 @@
     <bool name="support_gesture_wakeup">true</bool>
     <!-- whether support edge handgrip -->
     <bool name="support_edge_handgrip">false</bool>
+    <!-- whether the device app permission detail show in provision-->
+    <bool name="support_provision_app_permission">true</bool>
+    <!--whether support pre-installed application-->
+    <bool name="support_pre_installed_application">true</bool>
     <!--wheater support validate device when syste upadte -->
     <bool name="support_ota_validate">true</bool>
     <!--whether show my device-->
@@ -216,8 +220,16 @@
     <integer name="cpu_max_freq">215</integer>
     <!--Successful flag of camera continuous auto focus  result-->
     <integer name="camera_focus_success_flag">2</integer>
+    <!--support front flash or not-->
+    <bool name="support_front_flash">true</bool>
     <!--b0:flash b1:hdr b2:motion b3:night-->
-    <integer name="camera_supported_asd">8</integer>
+    <integer name="camera_supported_asd">11</integer>
+    <!--front asd b0:flash b1:hdr b2:motion b3:night-->
+    <integer name="camera_supported_front_asd">10</integer>
+    <!-- front hht enhance-->
+    <bool name="support_front_hht_enhance">true</bool>
+    <!--whether front sensor support remosic-->
+    <bool name="is_front_remosic_sensor">true</bool>
     <!--total steps number of camera compensation-->
     <float name="camera_exposure_compensation_steps_num">12.0</float>
     <!--Left margin of count down parent layout for front camera-->
@@ -231,8 +243,19 @@
     <integer name="smartcover_smallwindow_top">10</integer>
     <integer name="smartcover_smallwindow_right">1080</integer>
     <integer name="smartcover_smallwindow_bottom">840</integer>
+    <!--When these apps access camera, force use higher size -->
+    <string-array name="remove_lower_perview_size_list">
+        <item>com.tencent.mm</item>
+    </string-array>
+    <!--camera continuous shot callback class name-->
+    <string name="camera_continuous_shot_callback_class">ContinuousShotCallback</string>
+    <!--camera continuous shot callback setter method name-->
+    <string name="camera_continuous_shot_callback_setter">setContinuousShotCallback</string>
+    <bool name="fingerprint_wakeup_device">true</bool>
     <!-- fingerprint navigation event name list -->
     <string-array name="fp_nav_event_name_list">
+        <item>fpc_irq_wakeup</item>
+        <item>fp-keys</item>
         <item>uinput-fpc</item>
         <item>uinput-goodix</item>
     </string-array>
@@ -267,22 +290,53 @@
     <bool name="boost_gpu">true</bool>
     <bool name="support_audio_loopback">true</bool>
     <bool name="support_new_silentmode">true</bool>
+    <!-- whether camera support AI lens entry -->
+    <bool name="camera_support_ai_lens">false</bool>
+    <bool name="camera_supported_ai_scene">false</bool>
+    <!--whether round corner-->
+    <bool name="support_round_corner">true</bool>
     <!-- whether CN hardware can flash Global rom -->
     <bool name="enable_flash_global">true</bool>
     <!--whether support tele asd night in camera-->
     <bool name="is_support_tele_asd_night">true</bool>
     <!--whether support optical zoom in camera-->
     <bool name="is_support_optical_zoom">true</bool>
+    <!--whether taking 18x9 ratio screen in camera-->
+    <bool name="is_18x9_ratio_screen">false</bool>
     <!--whether support portrait in camera-->
     <bool name="is_support_portrait">true</bool>
     <!--whether sensor_has_latency-->
     <bool name="sensor_has_latency">true</bool>
     <!-- device sar value -->
     <float name="device_sar">1.26</float>
+    <!--whether taking legacy face beauty in camera-->
+    <bool name="is_legacy_face_beauty">false</bool>
+    <!--whether front camera support hdr or not-->
+    <bool name="support_front_hdr">true</bool>
+　　<!--whether front camera support hht or not-->
+    <bool name="support_front_hht">true</bool>
     <!--whether front camera support bokeh or not-->
     <bool name="support_front_bokeh">true</bool>
     <!--whether camera support portrait mode switch -->
     <bool name="camera_is_support_portrait_switch">true</bool>
+    <!--whether support auto mirror in camera-->
+    <bool name="support_auto_mirror">false</bool>
+    <!--whether support auto mirror in camera-->
+    <bool name="enhance_beauty_with_hht">true</bool>
     <!--whether support add watermark on bottom left of picture-->
     <bool name="support_picture_watermark">true</bool>
+    <!--whether need video stabilization crop-->
+    <bool name="need_video_stabilization_crop">true</bool>
+    <bool name="disable_video_stabilization_in_speed_slow_mode">true</bool>
+    <!--whether add algorithm in file name or not-->
+    <bool name="enable_algorithm_in_file_suffix">false</bool>
+    <!--whether enable face detection in video and funmode or not-->
+    <bool name="support_camera_video_face_detection">true</bool>
+    <!-- Camera HDR default value -->
+    <integer name="support_camera_hdr_default_value">3</integer>
+    <integer name="support_camera_front_hdr_default_value">3</integer>
+    <!-- whether camera supports paralell process -->
+    <bool name="support_parallel_process">true</bool>
+	<!--camera max quality which support high frame rate,1:480 2:720 3:1080-->
+    <integer name="support_camera_hfr_max_quality">3</integer>
 </features>
